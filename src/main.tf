@@ -15,7 +15,7 @@ data "azurerm_image" "search" {
 }
 
 output "image_id" {
-  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/RG-EASTUS-SPT-PLATFORM/providers/Microsoft.Compute/images/AZLXSPTDEVOPS01_Image"
+  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/RG-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/MyImages/windows-vm-def/latest - x64 Gen1"
 }
 
 # Create a Resource Group for the new Virtual Machine.
