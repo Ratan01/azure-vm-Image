@@ -3,7 +3,7 @@ name: 'TerraformImage'
 on:
   push:
     branches: 
-    -main
+    - main
   pull_request:
 
 env:
