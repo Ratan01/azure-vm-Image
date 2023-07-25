@@ -10,7 +10,7 @@ provider "azurerm" {
 
 # Locate the existing custom/golden image
 data "azurerm_image" "search" {
-  name                = "windows-vm-def (MyImages/windows-vm-def)"
+  name                = "MyImages/windows-vm-def/latest - x64 Gen1"
   resource_group_name = "Ratan-Terraform"
 }
 
