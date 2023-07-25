@@ -10,12 +10,12 @@ provider "azurerm" {
 
 # Locate the existing custom/golden image
 data "azurerm_image" "search1" {
-  name                = "MyImages/windows-vm-def"
+  name                = "MyImages/windows-vm-def/0.0.1"
   resource_group_name = "Ratan-Terraform"
 }
 
 output "image_id" {
-  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/RG-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/MyImages/windows-vm-def"
+  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/RG-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/MyImages/windows-vm-def/0.0.1"
 }
 
 # Create a Resource Group for the new Virtual Machine.
