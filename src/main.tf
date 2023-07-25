@@ -9,7 +9,7 @@ provider "azurerm" {
 }
 
 # Locate the existing custom/golden image
-data "azurerm_image" "search" {
+data "azurerm_image" "search12" {
   name                = "MyImages/windows-vm-def"
   resource_group_name = "Ratan-Terraform"
 }
