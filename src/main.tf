@@ -9,7 +9,7 @@ provider "azurerm" {
 }
 
 # Locate the existing custom/golden image
-data "azurerm_image" "search12" {
+data "azurerm_image" "search1" {
   name                = "MyImages/windows-vm-def"
   resource_group_name = "Ratan-Terraform"
 }
@@ -86,7 +86,7 @@ resource "azurerm_virtual_machine" "vm" {
   delete_data_disks_on_termination = true
 
   storage_image_reference {
-    id = "${data.azurerm_image.search12.id}"
+    id = "${data.azurerm_image.search1.id}"
   }
 
   storage_os_disk {
