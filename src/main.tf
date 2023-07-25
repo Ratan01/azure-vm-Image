@@ -4,6 +4,8 @@ provider "azurerm" {
     client_id       = "a8e8fcb7-ee3a-4260-8942-73671d830a1a"
     client_secret   = "5Kn8Q~HDr7T4SFNADYvjTXrMxqXZoK0K2vthoaBk"
     tenant_id       = "dc07ee3a-4d6e-436e-b3f4-29e1cc532ced"
+    features {
+    }
 }
 
 # Locate the existing custom/golden image
