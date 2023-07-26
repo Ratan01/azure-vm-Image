@@ -15,7 +15,7 @@ data "azurerm_image" "search1" {
 }
 
 output "image_id" {
-  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/RG-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/windows-vm-def"
+  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/Ratan-Terraform-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/windows-vm-def"
 }
 
 # Create a Resource Group for the new Virtual Machine.
