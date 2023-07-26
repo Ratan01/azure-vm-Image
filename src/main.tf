@@ -14,9 +14,9 @@ data "azurerm_image" "search1" {
   resource_group_name = "Ratan-Terraform"
 }
 
-output "image_id" {
-  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/Ratan-Terraform-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/windows-vm-def"
-}
+#output "image_id" {
+  #value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/Ratan-Terraform-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/windows-vm-def"
+#}
 
 # Create a Resource Group for the new Virtual Machine.
 resource "azurerm_resource_group" "main" {
@@ -102,7 +102,7 @@ resource "azurerm_virtual_machine" "vm" {
     admin_password = "admin#2019"
   }
 
-  os_profile_linux_config {
-    disable_password_authentication = false
-  }
+  #os_profile_linux_config {
+    #disable_password_authentication = false
+  #}
 }
