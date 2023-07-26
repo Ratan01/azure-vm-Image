@@ -25,12 +25,12 @@ resource "azurerm_resource_group" "main" {
 }
 
 # Create a Virtual Network within the Resource Group
-resource "azurerm_virtual_network" "main" {
-  name                = "RG-Vnet"
-  address_space       = ["10.100.0.0/16"]
-  resource_group_name = "${azurerm_resource_group.main.name}"
-  location            = "${azurerm_resource_group.main.location}"
-}
+#resource "azurerm_virtual_network" "main" {
+ # name                = "RG-Vnet"
+  #address_space       = ["10.100.0.0/16"]
+  #resource_group_name = "${azurerm_resource_group.main.name}"
+  #location            = "${azurerm_resource_group.main.location}"
+#}
 
 # Create a Subnet within the Virtual Network
 resource "azurerm_subnet" "internal" {
@@ -68,7 +68,7 @@ resource "azurerm_network_interface" "main" {
   #network_security_group_id = "${azurerm_network_security_group.main.id}"
 
   ip_configuration {
-    name                          = "primary"
+    name                          = "nicconfig"
     subnet_id                     = "${azurerm_subnet.internal.id}"
     private_ip_address_allocation = "static"
     private_ip_address            = "${cidrhost("10.100.1.8/24", 4)}"
