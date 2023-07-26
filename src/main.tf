@@ -25,12 +25,12 @@ resource "azurerm_resource_group" "main" {
 }
 
 # Create a Virtual Network within the Resource Group
-#resource "azurerm_virtual_network" "main" {
- # name                = "RG-Vnet"
-  #address_space       = ["10.100.0.0/16"]
-  #resource_group_name = "${azurerm_resource_group.main.name}"
-  #location            = "${azurerm_resource_group.main.location}"
-#}
+resource "azurerm_virtual_network" "main" {
+  name                = "RG-Vnet"
+  address_space       = ["10.100.0.0/16"]
+  resource_group_name = "${azurerm_resource_group.main.name}"
+  location            = "${azurerm_resource_group.main.location}"
+}
 
 # Create a Subnet within the Virtual Network
 resource "azurerm_subnet" "internal" {
