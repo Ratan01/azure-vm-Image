@@ -21,7 +21,7 @@ output "image_id" {
 # Create a Resource Group for the new Virtual Machine.
 resource "azurerm_resource_group" "main" {
   name     = "Ratan-Terraform"
-  location = "westeurope"
+  location = "WEST EUROPE"
 }
 
 # Create a Virtual Network within the Resource Group
