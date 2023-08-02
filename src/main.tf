@@ -2,7 +2,7 @@
 provider "azurerm" {
     subscription_id = "fab6bd82-e9fb-4229-91d4-476d41c138fb"
     client_id       = "a8e8fcb7-ee3a-4260-8942-73671d830a1a"
-    client_secret   = "GRx8Q~hS1eBh1M2QQKmVc.dOl2SXElphpyEQ8cU_"
+    client_secret   = "ZH58Q~0J5tz3yEBYfnvVNmRTKqxypnOmvGl1Vanv"
     tenant_id       = "dc07ee3a-4d6e-436e-b3f4-29e1cc532ced"
     features {
     }
@@ -10,18 +10,18 @@ provider "azurerm" {
 
 # Locate the existing custom/golden image
 data "azurerm_image" "img" {
-  name                = "windows-vm-def"
-  resource_group_name = "Ratan-Terraform"
+  name                = "ratan_vm_image_dn"
+  resource_group_name = "ratan"
 }
 
 output "image_id" {
-  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/Ratan-Terraform-WESTEUROPE-SPT-PLATFORM/providers/Microsoft.Compute/images/windows-vm-def"
+  value = "/subscriptions/fab6bd82-e9fb-4229-91d4-476d41c138fb/resourceGroups/ratan-EASTUS-SPT-PLATFORM/providers/Microsoft.Compute/images/ratan_vm_image_dn"
 }
 
 # Create a Resource Group for the new Virtual Machine.
 resource "azurerm_resource_group" "main" {
-  name     = "Ratan-Terraform"
-  location = "WEST EUROPE"
+  name     = "ratan"
+  location = "EAST US"
 }
 
 # Create a Virtual Network within the Resource Group
