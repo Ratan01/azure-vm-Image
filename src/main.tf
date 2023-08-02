@@ -29,7 +29,7 @@ resource "azurerm_subnet" "sub12" {
   name                 = "RG-Terraform-snet-in"
   virtual_network_name = "RG-OPT-QA-Vnet"
   resource_group_name  = "${azurerm_resource_group.main.name}"
-  address_prefixes     = "1.0.1.0/24"
+  address_prefixes     = ["10.0.2.0/24"]
 }
 
 # Create a Network Security Group with some rules
@@ -68,7 +68,7 @@ resource "azurerm_network_interface" "main" {
 }
 
 # Create a new Virtual Machine based on the Golden Image
-resource "azurerm_virtual_machine" "vm" {
+resource "azurerm_virtual_machine" "vm1" {
   name                             = "AZLXDEVOPS01"
   location                         = "${azurerm_resource_group.main.location}"
   resource_group_name              = "${azurerm_resource_group.main.name}"
