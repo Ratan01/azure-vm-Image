@@ -29,7 +29,7 @@ resource "azurerm_subnet" "sub12" {
   name                 = "RG-Terraform-snet-in"
   virtual_network_name = "RG-OPT-QA-Vnet"
   resource_group_name  = "${azurerm_resource_group.main.name}"
-  address_prefixes     = "10.100.2.0/24"
+  address_prefixes     = "1.0.1.0/24"
 }
 
 # Create a Network Security Group with some rules
@@ -61,7 +61,7 @@ resource "azurerm_network_interface" "main" {
 
   ip_configuration {
     name                          = "nicconfig"
-    subnet_id                     = "${azurerm_subnet.internal.id}"
+    subnet_id                     = "${azurerm_subnet.sub12.id}"
     private_ip_address_allocation = "static"
     private_ip_address            = "${cidrhost("10.100.2.16/24", 4)}"
   }
