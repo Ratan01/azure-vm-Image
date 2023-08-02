@@ -25,11 +25,11 @@ resource "azurerm_resource_group" "main" {
 }
 
 # Create a Subnet within the Virtual Network
-resource "azurerm_subnet" "internal" {
+resource "azurerm_subnet" "sub12" {
   name                 = "RG-Terraform-snet-in"
   virtual_network_name = "RG-OPT-QA-Vnet"
   resource_group_name  = "${azurerm_resource_group.main.name}"
-  address_prefix       = "10.100.2.0/24"
+  address_prefixes     = "10.100.2.0/24"
 }
 
 # Create a Network Security Group with some rules
